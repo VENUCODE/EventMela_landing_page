@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a0b521d91e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+
+    <div class="container header" id="home">
+        <div class="titlebar">
+            <div class="image">
+                <span class="logo__main"></span>
+      
+            </div>
+            <div class="title">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#steps">Register</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="home">
+         <h1 >EVENT<br>MELA</h1>
+            <video playsinline autoplay muted loop>
+                <source src="background.mp4" type="video/webm">
+                Your browser doesnot support video
+            </video>
+        </div>
+    </div>
+    <section class="images" id="steps">
+        <h1>How To Participate </h1>
+        <div class="steps">
+            <div class="step1">
+                <button>Step 1</button>
+                <h2>Select Events</h2>
+                <p>First, select Events button from menu <br><br>Choose Event type you want to participate</p>
+            </div>
+            <div class="step2"><button>Step 2</button>
+                <h2>Register Details</h2>
+                <p>Register for Event you want to participate
+                    <br><br>Events like Dance,Singing,Skits etc.
+                </p>
+
+            </div>
+            <div class="step3"><button>Step 3</button>
+                <h2>Submit Form</h2>
+                <p>After enterd your details click on submit to submit your details </p>
+            </div>
+        </div>
+
+    </section>
+    <section class="gallery" id="events">
+        <h1>LET'S DO THIS </h1>
+        <div class="dance">
+            <div class="matter">
+                <h1>Dance Performances</h1>
+                <p>Watching a ballet performance,Their graceful movements ,perfectly synchorined with the enchancing
+                    music,created a mesmerizing visual and auditory experience.Each pirouette and arabesqueeu told
+                    astory, evoking a range of emotions that left me in awe of the aristary and dedication of the
+                    performer.It was a breath taking example of how dance can. </p>
+            </div>
+            <div class="image">
+                <img src="dancee.jpg" alt="">
+            </div>
+        </div>
+
+
+        <div class="singing">
+            <div class="image">
+                <img src="singing.jpg" alt="" height="350px" width="100%">
+            </div>
+            <div class="matter">
+                <h1>Singing Performances</h1>
+                <p>Watching a ballet performance,Their graceful movements ,perfectly synchorined with the enchancing
+                    music,created a mesmerizing visual and auditory experience.Each pirouette and arabesqueeu told
+                    astory, evoking a range of emotions that left me in awe of the aristary and dedication of the
+                    performer.It was a breath taking example of how dance can. </p>
+            </div>
+
+        </div>
+
+
+        <div class="skit">
+            <div class="matter">
+                <h1>Skit Performances</h1>
+                <p>Watching a ballet performance,Their graceful movements ,perfectly synchorined with the enchancing
+                    music,created a mesmerizing visual and auditory experience.Each pirouette and arabesqueeu told
+                    astory, evoking a range of emotions that left me in awe of the aristary and dedication of the
+                    performer.It was a breath taking example of how dance can. </p>
+            </div>
+            <div class="image">
+                <img src="singing.jpg" alt="">
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="campus" id="about">
+        <div class="box" >
+            <div>
+            <h1>Let's Join Your Hands</h1>
+            <p>Want to participate in ornate events register using this website read the steps mentioned in above. Lets
+                join the event and enjoy your day by performing dances,singing..etc</p>
+           </div> 
+           <div class="images">
+                <img src="dancee.jpg" alt="" >
+                <img src="singing.jpg" alt="" >
+            </div>
+        </div>
+</section>
+
+        <div class="end">
+            <ul>
+                <li>
+                    <h3>Follow Us</h3>
+                </li>
+                <li><a href=""><i class="fa-brands fa-instagram"></a></i></li>
+                <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+            <ul>
+                <li>
+                    <h3>Contact</h3>
+                </li>
+                <li style="margin-left: -30%; color: white;"><i class="fa-solid fa-phone"></i> 9876543210</li>
+                <li style="margin-left: -30%; color: white;"><i class="fa-solid fa-envelope"></i>
+                    someone@gmail.com</li>
+            </ul>
+            <ul style="margin-left: -14%;">
+                <li>
+                    <h3><a href="#">Events</a></h3>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h3><a href="#">About</a></h3>
+                </li>
+
+            </ul>
+        </div>
+
+
+
+ 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+          
+            links.forEach(link => {
+              link.addEventListener('click', function(e) {
+                e.preventDefault();
+          
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+          
+                if (targetElement && targetId!="about" &&targetId!="steps" ) {
+                  window.scrollTo({
+                    top: targetElement.offsetTop-58,
+                    behavior: 'smooth'
+                  });
+                }
+                else if (targetElement && targetId=="about") {
+                    window.scrollTo({
+                        top: targetElement.offsetTop-70,
+                        behavior: 'smooth'
+                      });
+                }
+                else if (targetElement && targetId=="steps") {
+                    window.scrollTo({
+                        top: targetElement.offsetTop-70,
+                        behavior: 'smooth'
+                      });
+                }
+              });
+            });
+          });
+          
+
+    </script>
+</body>
+
+</html>
